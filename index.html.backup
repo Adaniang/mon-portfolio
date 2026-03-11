@@ -33,25 +33,7 @@
 
         <section id="projects">
             <h2>Mes Projets</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h3>Site E-commerce</h3>
-                    <p>Une plateforme de vente en ligne moderne avec panier et paiement sécurisé.</p>
-                    <p><strong>Technologies :</strong> React, Node.js, MongoDB</p>
-                </article>
-
-                <article class="project-card">
-                    <h3>Application Mobile de Fitness</h3>
-                    <p>Application de suivi d'entraînement avec statistiques et programmes personnalisés.</p>
-                    <p><strong>Technologies :</strong> React Native, Firebase</p>
-                </article>
-
-                <article class="project-card">
-                    <h3>Dashboard Analytics</h3>
-                    <p>Tableau de bord interactif pour visualisation de données d'entreprise.</p>
-                    <p><strong>Technologies :</strong> D3.js, Python, PostgreSQL</p>
-                </article>
-            </div>
+            <p>Découvrez mes réalisations récentes.</p>
         </section>
 
         <section id="contact">
@@ -63,5 +45,20 @@
     <footer>
         <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
     </footer>
+    <button class="theme-toggle" onclick="toggleTheme()">Mode sombre</button>
+
+<script>
+function toggleTheme() {
+    const html = document.documentElement;
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+}
+
+// Charger le thème sauvegardé
+const savedTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', savedTheme);
+</script>
 </body>
 </html>
