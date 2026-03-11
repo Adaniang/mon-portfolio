@@ -151,3 +151,4 @@ footer {
     margin-top: 2rem;
 }
 form { margin: 20px; }
+input:focus { border-color: blue; }
